@@ -9,6 +9,8 @@
   },
   "scripts": {
     "start": "node src/api.js",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "dev": "nodemon src/api.js",
     "test": "jest --coverage",
     "test:publish": "npm test && coveralls < coverage/lcov.info",
@@ -29,6 +31,7 @@
     "dotenv-flow": "^3.1.0",
     "express": "^4.17.1",
     "express-timeout-handler": "^2.2.0",
+    "fide-ratings-scraper": "^1.0.6",
     "node-fetch": "^2.6.6"
   },
   "devDependencies": {
@@ -38,6 +41,7 @@
     "coveralls": "^3.1.0",
     "eslint": "^7.6.0",
     "fs": "0.0.1-security",
+    "gh-pages": "^5.0.0",
     "jest": "^26.2.2",
     "nodemon": "^2.0.4"
   }
